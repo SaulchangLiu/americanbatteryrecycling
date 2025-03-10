@@ -1,0 +1,352 @@
+---
+---
+@import "minima";
+
+/* Variables */
+:root {
+  --primary-color: #1a5276;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --light-text: #f8f9fa;
+  --background-light: #f8f9fa;
+  --background-dark: #0a3d62;
+  --border-color: #e9ecef;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.site-header {
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  min-height: 56px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-title {
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.site-nav .page-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 80vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.hero-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Content Section */
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 0.8rem auto 0;
+}
+
+/* Featured Section */
+.featured-section {
+  margin-bottom: 4rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-content {
+  padding: 1.5rem;
+}
+
+.feature-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+/* About Preview */
+.about-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.about-content {
+  padding: 2rem;
+}
+
+.about-image {
+  height: 100%;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-button {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 3px;
+  transition: var(--transition);
+}
+
+.text-button:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+  background-color: var(--background-dark);
+  color: var(--light-text);
+  padding: 3rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.newsletter h2 {
+  margin-top: 0;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 1.5rem auto 0;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-family: inherit;
+}
+
+.newsletter-form button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--background-dark);
+  color: var(--light-text);
+  padding: 3rem 0 1rem;
+}
+
+.footer-heading {
+  color: white;
+}
+
+.footer-col-wrapper {
+  color: #a9b6c2;
+}
+
+.footer-col a {
+  color: #a9b6c2;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.social-media-list {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .about-preview {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    height: 300px;
+    order: -1;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-form button {
+    border-radius: 4px;
+  }
+}
