@@ -34,57 +34,175 @@ layout: default
   </div>
 </section>
 
-<!-- Featured Stories -->
-<div class="content-section">
-  <h2 class="section-heading">Featured Stories</h2>
-  <div class="featured-grid">
-    {% for feature in site.featured limit:3 %}
-      <div class="feature-card">
-        <a href="{{ feature.url | relative_url }}">
-          <div class="feature-image" style="background-image: url('{{ feature.image | default: "/assets/images/default-feature.jpg" }}')"></div>
-          <div class="feature-content">
-            <h3>{{ feature.title }}</h3>
-            <p>{{ feature.excerpt | strip_html | truncatewords: 20 }}</p>
+<!-- Core Competencies Section -->
+<section class="capabilities-section" style="padding: 80px 20px; background: #f8f9fa;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 2.5rem; font-weight: bold; color: #333; margin-bottom: 1rem;">Core Competencies</h2>
+      <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
+        Our expertise spans the complete battery lifecycle, from component optimization to manufacturing excellence.
+      </p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-bottom: 80px;">
+      <!-- Small Electronic Parts Cost Reduction -->
+      <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid #6a11cb;">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #6a11cb, #2575fc); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <span style="color: white; font-size: 1.5rem;">💰</span>
           </div>
-        </a>
+          <h3 style="font-size: 1.3rem; font-weight: bold; color: #333; margin: 0;">Small Electronic Parts Cost Reduction</h3>
+        </div>
+        <p style="color: #666; line-height: 1.6; margin: 0;">
+          Proven track record in analyzing component sourcing, optimizing designs, and negotiating supplier contracts to significantly reduce BOM costs without compromising quality or performance.
+        </p>
       </div>
-    {% endfor %}
+
+      <!-- Battery Assembly -->
+      <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid #2575fc;">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #2575fc, #6a11cb); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <span style="color: white; font-size: 1.5rem;">🔋</span>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: bold; color: #333; margin: 0;">Battery Assembly</h3>
+        </div>
+        <p style="color: #666; line-height: 1.6; margin: 0;">
+          Expertise in precision assembly of battery packs across multiple chemistries (Li-ion, LiFePO4, etc.), ensuring safety, consistency, and scalability from prototype to production.
+        </p>
+      </div>
+
+      <!-- Battery Module Development -->
+      <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid #28a745;">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #28a745, #20c997); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <span style="color: white; font-size: 1.5rem;">⚡</span>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: bold; color: #333; margin: 0;">Battery Module Development</h3>
+        </div>
+        <p style="color: #666; line-height: 1.6; margin: 0;">
+          End-to-end capability from concept to production—including design, cell selection, BMS integration, mechanical housing, and thermal management—for custom and high-performance battery modules.
+        </p>
+      </div>
+    </div>
+
+    <!-- Differentiators Section -->
+    <div style="background: white; padding: 50px; border-radius: 16px; box-shadow: 0 6px 30px rgba(0,0,0,0.1); margin-bottom: 60px;">
+      <h3 style="font-size: 2rem; font-weight: bold; color: #333; text-align: center; margin-bottom: 40px;">Our Differentiators</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #ff6b6b, #ffa726); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+            <span style="color: white; font-size: 1.8rem;">🌐</span>
+          </div>
+          <h4 style="font-weight: bold; color: #333; margin-bottom: 10px;">Extensive Vendor Network</h4>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Enabling cost-efficient sourcing and rapid prototyping</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+            <span style="color: white; font-size: 1.8rem;">👥</span>
+          </div>
+          <h4 style="font-weight: bold; color: #333; margin-bottom: 10px;">Agile Engineering Team</h4>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Cross-functional expertise in electronics, power systems, and embedded controls</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+            <span style="color: white; font-size: 1.8rem;">🏛️</span>
+          </div>
+          <h4 style="font-weight: bold; color: #333; margin-bottom: 10px;">Diverse Client Experience</h4>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Supporting commercial and government clients with flexible production volumes</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+            <span style="color: white; font-size: 1.8rem;">✓</span>
+          </div>
+          <h4 style="font-weight: bold; color: #333; margin-bottom: 10px;">Quality Focus</h4>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Emphasis on reliability, compliance, and product lifecycle efficiency</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Past Performance Section -->
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 50px; border-radius: 16px; color: white;">
+      <h3 style="font-size: 2rem; font-weight: bold; text-align: center; margin-bottom: 40px;">Proven Track Record</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+          <h4 style="font-weight: bold; margin-bottom: 15px; font-size: 1.2rem;">Energy Storage Solutions</h4>
+          <p style="line-height: 1.6; margin: 0; opacity: 0.9;">Delivered cost-optimized electronic subcomponents for energy storage OEMs</p>
+        </div>
+        
+        <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+          <h4 style="font-weight: bold; margin-bottom: 15px; font-size: 1.2rem;">Industrial Applications</h4>
+          <p style="line-height: 1.6; margin: 0; opacity: 0.9;">Designed and manufactured battery modules for portable industrial devices</p>
+        </div>
+        
+        <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+          <h4 style="font-weight: bold; margin-bottom: 15px; font-size: 1.2rem;">Defense & Government</h4>
+          <p style="line-height: 1.6; margin: 0; opacity: 0.9;">Supported military and civilian contractors with ruggedized power solutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Stories -->
+<div class="content-section" style="padding: 60px 20px; background: white;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 class="section-heading" style="text-align: center; font-size: 2.5rem; font-weight: bold; color: #333; margin-bottom: 50px;">Featured Stories</h2>
+    <div class="featured-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+      {% for feature in site.featured limit:3 %}
+        <div class="feature-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+          <a href="{{ feature.url | relative_url }}" style="text-decoration: none; color: inherit;">
+            <div class="feature-image" style="height: 200px; background-image: url('{{ feature.image | default: "/assets/images/default-feature.jpg" }}'); background-size: cover; background-position: center;"></div>
+            <div class="feature-content" style="padding: 25px;">
+              <h3 style="font-size: 1.3rem; font-weight: bold; color: #333; margin-bottom: 10px;">{{ feature.title }}</h3>
+              <p style="color: #666; line-height: 1.6; margin: 0;">{{ feature.excerpt | strip_html | truncatewords: 20 }}</p>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
 <!-- Blog Section -->
-<div class="content-section">
-  <h2 class="section-heading">Latest Articles</h2>
-  <div class="posts-grid">
-    {% for post in site.posts limit:6 %}
-      <div class="post-card">
-        <a href="{{ post.url | relative_url }}">
-          <div class="post-image" style="background-image: url('{{ post.image | default: "/assets/images/default-post.jpg" }}')"></div>
-          <div class="post-content">
-            <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
-          </div>
-        </a>
-      </div>
-    {% endfor %}
+<div class="content-section" style="padding: 60px 20px; background: #f8f9fa;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 class="section-heading" style="text-align: center; font-size: 2.5rem; font-weight: bold; color: #333; margin-bottom: 50px;">Latest Articles</h2>
+    <div class="posts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      {% for post in site.posts limit:6 %}
+        <div class="post-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+          <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
+            <div class="post-image" style="height: 180px; background-image: url('{{ post.image | default: "/assets/images/default-post.jpg" }}'); background-size: cover; background-position: center;"></div>
+            <div class="post-content" style="padding: 20px;">
+              <p class="post-date" style="color: #999; font-size: 0.9rem; margin-bottom: 8px;">{{ post.date | date: "%b %-d, %Y" }}</p>
+              <h3 style="font-size: 1.2rem; font-weight: bold; color: #333; margin-bottom: 10px;">{{ post.title }}</h3>
+              <p style="color: #666; line-height: 1.5; margin: 0;">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
 <!-- Newsletter Section -->
-<div class="newsletter">
-  <h2>Stay Updated</h2>
-  <p>Subscribe to our newsletter to receive the latest updates.</p>
-  <form class="newsletter-form">
-    <input type="email" placeholder="Enter your email" required>
-    <button type="submit">Subscribe</button>
-  </form>
+<div class="newsletter" style="background: linear-gradient(135deg, #6a11cb, #2575fc); padding: 60px 20px; text-align: center; color: white;">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <h2 style="font-size: 2.2rem; font-weight: bold; margin-bottom: 15px;">Stay Updated</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9;">Subscribe to our newsletter to receive the latest updates on battery recycling innovations.</p>
+    <form class="newsletter-form" style="display: flex; gap: 15px; max-width: 400px; margin: 0 auto;">
+      <input type="email" placeholder="Enter your email" required style="flex: 1; padding: 12px 15px; border: none; border-radius: 6px; font-size: 1rem;">
+      <button type="submit" style="background: #000; color: white; padding: 12px 25px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Subscribe</button>
+    </form>
+  </div>
 </div>
 
 <!-- Footer Section -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <p>&copy; {{ site.time | date: "%Y" }} American Battery Recycling Service LLC. All rights reserved.</p>
-    <p>Contact us at <a href="mailto:justin.chung@americanbatteryrecycling.com">justin.chung@americanbatteryrecycling.com</a></p>
+<footer class="site-footer" style="background: #1a1a1a; color: white; padding: 40px 20px; text-align: center;">
+  <div class="footer-container" style="max-width: 1200px; margin: 0 auto;">
+    <p style="margin-bottom: 10px;">&copy; {{ site.time | date: "%Y" }} American Battery Recycling Service LLC. All rights reserved.</p>
+    <p style="margin: 0;">Contact us at <a href="mailto:justin.chung@americanbatteryrecycling.com" style="color: #6a11cb; text-decoration: none;">justin.chung@americanbatteryrecycling.com</a></p>
   </div>
 </footer>
